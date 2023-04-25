@@ -1,0 +1,128 @@
+{
+    "SystemName": "国际电子贸易服务化系统",
+    "DbConfig": {
+        "ConnectionString": "User ID=iaos;Password=8Q92HPnDxOc;Data Source=\"(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = 10.196.69.77)(PORT = 1521))(ADDRESS = (PROTOCOL = TCP)(HOST = 10.196.69.78)(PORT = 1521))(LOAD_BALANCE = yes)(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME = kjfemdb)(FAILOVER_MODE =(TYPE = SELECT)(METHOD = BASIC)(RETRIES = 180)(DELAY = 5))))\";",
+        "DbType": "Oracle"
+    },
+    "IdentityServerConfig": {
+        "Authority": "http://10.196.68.136:5000",
+        "ApiName": "IAOS.Api",
+        "ClientId": "IAOS_Client",
+        "ClientSecret": null,
+        "GroupNo": "IAOS_User",
+        "AppClientId": "IAOSInnerClient",
+        "AppClientSecret": null
+    },
+    "SlowThreshold": 300,
+    "WebSiteDomain": "http://asonehelper.csiitl.com",
+    "ListenConfigs": [
+        {
+            "Host": "0.0.0.0",
+            "Port": 5020,
+            "SSLFile": "",
+            "SSLPassword": ""
+        }
+    ],
+    "CorsConfig": {
+        "AllowOrigins": [
+            "http://localhost:5501",
+            "http://127.0.0.1:5501",
+            "http://localhost:5500",
+            "http://127.0.0.1:5500",
+            "http://127.0.0.1:8080",
+            "http://localhost:8080",
+            "http://localhost:8081",
+            "http://10.196.68.136:5020",
+            "http://127.0.0.1:8081",
+            "https://dev-iaos.csiitl.com:443",
+            "https://dev-iaos.csiitl.com",
+            "https://dev-iaos-api.csiitl.com:443",
+            "https://dev-iaos-api.csiitl.com",
+            "http://192.168.0.192:8081",
+            "https://esoit.singlewindow.gz.cn",
+            "https://esoit.singlewindow.gz.cn:443",
+            "https://esoitca.singlwindow.gz.cn",
+            "https://esoitstore.singlewindow.gz.cn",
+            "https://esoitiaos.singlewindow.gz.cn",
+			"https://gz.gd.singlewindow.cn",
+            "https://cantonfair.bankofchina.com",
+            "http://gz.gd.singlewindow.cn",
+            "http://cantonfair.bankofchina.com"
+        ]
+    },
+    "FunctionList": [ 7, 8 ],
+    "CFCABaseUrl": "http://10.196.68.136:19992",
+    "BocBaseUrl": "http://10.196.68.136:19992",
+    "SMSApiBaseUrl": "",
+    "StoreBaseUrl": "https://esoitstore.singlewindow.gz.cn",
+    "OcrBaseUrl": "http://电子口岸内网/predict/ocr_system",
+    "ASOneBaseUrl": "http://zwfw.safe.gov.cn/asone/WelcomeServlet",
+    "VCodeSMSConfig": {
+        "TemplateId": "560ca80a831a459daf532754967728a9",
+        "Sender": "8819103035892",
+        "CoolDownTime": "60",
+        "ExpiresTime": "5",
+        "StatusCallBack": ""
+    },
+    "NoticeSMSConfig": {
+        "TemplateId": "f65fc5eb6d004920965e04053f5d420b",
+        "Sender": "88191030414",
+        "StatusCallBack": "",
+        "Content": "尊敬的客户，新增{0}笔涉外收入和{1}笔境内收入，累计尚未申报的涉外收入共{2}笔、境内收入共{3}笔，请尽快进行申报。"
+    },
+    "FeedBackSMSConfig": {
+        "TemplateId": "668ec5e6da914d77ad2924c9ae01fe4f",
+        "Sender": "88191030414",
+        "StatusCallBack": "",
+        "Content": "尊敬的客户，您有{0}笔涉外收入和{1}笔境内收入被退回，累计尚未申报（含退回）的涉外收入共{2}笔、境内收入共{3}笔，请尽快进行申报。"
+    },
+    "FailReTryTime": 7200,
+    "IsOpenJobSchedule": false,
+    "StoreApiLocalHost": "",
+    "ServiceSignalRSetting": {
+        "HostUrl": "https://servicesignal.csiitl.com/",
+        "CaptureDataUrl": "api/SingleWin/CaptureData",
+        "ServiceSignalRSecretKey": "x^VtVytU1?bP~mAk"
+    },
+
+    "IETSOSSetting": {
+        "Url": "https://dev.csiitl.com:8002",
+        "auth_client_id": "ietsos",
+        "auth_client_secret": "4sjt1341gth.23@4fe"
+    },
+    //数据库DES加密密钥
+    "DES_KEY": "as2g31*6i3*7sc.21",
+    // 广州农商银行ID
+    "GRCBankId": 4,
+    "EmailConfig": {
+        "Host": "10.196.68.134",
+        "Port": 25,
+        "Sender": "esoitservices@gzeport.com",
+        "Account": "esoitservices@gzeport.com",
+        "Credentials": "Gzeport8810",
+        "EnableSSL": false
+    },
+    "AdminEmails": [
+        "980012212@qq.com",
+        "tangxin_gs@163.com"
+    ],
+    "StoreConfig": {
+        "ConnectionString": "User ID=store;Password=egpmJnimJoB;Data Source=\"(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = 10.196.69.77)(PORT = 1521))(ADDRESS = (PROTOCOL = TCP)(HOST = 10.196.69.78)(PORT = 1521))(LOAD_BALANCE = yes)(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME = kjfemdb)(FAILOVER_MODE =(TYPE = SELECT)(METHOD = BASIC)(RETRIES = 180)(DELAY = 5))))\";",
+        "DbType": "Oracle"
+    },
+    "LocalFileSetting": {
+        "WebSiteUrl": "https://esoitstore.singlewindow.gz.cn/",
+        "RootPath": "/esoitnas",
+        "ServeUnknownFileTypes": true,
+        "DefaultContentType": "application/x-msdownload",
+        "UseDirectoryBrowser": true,
+        "PhysicalFilePath": "/esoitnas",
+        "VirtualFilePath": "/esoitnas"
+    },
+    "Sftp": {
+        "BaseAddr": "219.141.191.184",
+        "Prot": 10022,
+        "UserName": "lp_tdg_ftzkhz",
+        "PassWord": "BOChq321!@#"
+    }
+}
